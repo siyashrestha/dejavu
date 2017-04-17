@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Learn Easy</title>
+
+<link rel="stylesheet" href="design.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./bootstrap-3.3.2-dist/css/bootstrap.min.css">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  
+<script type="text/javascript">
+ 
+function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+	document.getElementById("approx1").innerHTML =("correct, continue?");
+    } 
+    else if(document.getElementById('noCheck1').checked) {
+		document.getElementById("approx").innerHTML =("incorrect");
+	}
+	else if(document.getElementById('noCheck2').checked) {
+		document.getElementById("approx").innerHTML =("incorrect");
+	}
+	else if(document.getElementById('noCheck3').checked) {
+		document.getElementById("approx").innerHTML =("incorrect");
+	}
+   }
+
+
+  </script>
+</head>
+<body><br><br><br><br>
+<h2><center>"खुशी" को लागि शब्द चुन्नुहोस <center></h2>
+<br>
+<br>
+<form>
+<table align="center">
+<tr>
+<td><button class="s1"><img src="Happy.jpg" height="200" width="150"><br><input type="radio" name="check" id="yesCheck">ग्लुक्ली</button></td>
+<td><button class="s2"><img src="Goodbye.jpg" height="200" width="150"><br><input type="radio" name="check" id="noCheck1">औफ विएदेर्सेहें</button></td>
+<td><button class="s3"><img src="Sad.jpg" height="200" width="150"><br><input type="radio" name="check" id="noCheck2">त्रौरिग </button></td>
+<td><button class="s4"><img src="Sorry.jpg" height="200" width="150"><br><input type="radio" name="check" id="noCheck3">एस तुत उन्स लाएद </button></td>
+</tr>
+
+</table>
+<br><center>
+<button onclick="javascript:yesnoCheck()" type="button" class="btn btn-success">परिक्षण </button>
+<button type="submit" class="btn btn-info">फेरि प्रयास गर्नुहोस्</button>
+<button type="button" class="btn btn-primary"><a href="stage2.html"><font color="white"><label id="approx1"></label></font></a></button>
+</form>
+<center><label id="approx"></label></center>
+</body>
+</html>
