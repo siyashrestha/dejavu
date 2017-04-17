@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Learn Easy</title>
+
+  <link rel="stylesheet" href="design.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./bootstrap-3.3.2-dist/css/bootstrap.min.css">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body><br><br><br><br>
+<h5><font color=red size=3><center>*Note: It is case sensitive. Keep required spaces only</font></h5>
+<form><br><br>
+	<table align="center">
+		<tr>
+			<td>Thank You</td>
+			<td><input type="text" id=ty onblur=test()></td>
+		</tr>
+		<tr>
+			<td>Excuse Me</td>
+			<td><input type="text" id=em onblur=test()></td>
+		</tr>
+		<tr>
+			<td>Money</td>
+			<td><input type="text" id=m onblur=test()></td>
+		</tr>
+		<tr>
+			<td>Hello</td>
+			<td><input type="text" id=h onblur=test()></td>
+		</tr>
+		<tr>
+			<td>Any comments</td>
+			<td><textarea></textarea></td>
+		</tr>
+	</table>
+	<br>
+	<br>
+		<center>Current status:
+		<label id="approx"></label>
+		
+		<br><br>
+<button onclick="javascript:test()" type="button" class="btn btn-success">CHECK</button>
+<button type="submit" class="btn btn-info">TRY AGAIN</button>
+<button type="button" class="btn btn-primary"><a href="stage10.html"><font color="white"><label id="approx1"></label></font></a></button>
+</form>
+	
+	<script>
+		function test(){
+			var ty1=document.getElementById("ty").value;
+			var ty2=ty1.toUpperCase();
+			var em1=document.getElementById("em").value;
+			var em2=em1.toUpperCase();
+			var m1=document.getElementById("m").value;
+			var m2=m1.toUpperCase();
+			var h1=document.getElementById("h").value;
+			var h2=h1.toUpperCase();
+			 
+			if(Boolean(ty1)==false || ty2=="DANKE" && Boolean(em1)==false || em2=="ENTSCHULDIGEN SIE" && Boolean(m1)==false || m2=="GELD" && Boolean(h1)==false || h2=="HALLO")
+			{
+				document.getElementById("approx").innerHTML =("correct");
+			}else
+			{
+				document.getElementById("approx").innerHTML =("incorrect");
+			}
+			if(ty2=="DANKE" && em2=="ENTSCHULDIGEN SIE" && m2=="GELD" && h2=="HALLO")
+			{
+			document.getElementById("approx1").innerHTML =("correct, Continue?");
+			}
+		}
+	</script>
+</body>
+</html>
